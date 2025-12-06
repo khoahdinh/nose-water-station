@@ -1,4 +1,4 @@
-# Nose Water Station 🌊✨
+# Nose Water Station
 
 A personal blog project built for fun, learning, and the occasional existential crisis.
 
@@ -10,13 +10,13 @@ This project includes full source code for a custom blog system — from the adm
 
 ## ✨ Features
 
-- ✏️ Create, edit, and delete posts
-- 🗂️ Topic & category management
-- 🔐 User login & registration
-- 🛠️ Admin dashboard
-- 💬 Comment system (with anti-spam logic)
-- 🖼️ Image upload support
-- 📄 Multi-page frontend (Home, About, Single post, Contact…)
+- Create, edit, and delete posts
+- Topic & category management
+- User login & registration
+- Admin dashboard
+- Comment system (with anti-spam logic)
+- Image upload support
+- Multi-page frontend (Home, About, Single post, Contact…)
 
 ---
 
