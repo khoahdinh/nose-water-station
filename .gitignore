@@ -1,4 +1,23 @@
+# Ignore Composer dependencies
 /vendor/
-/composer.lock
+
+# Ignore Composer lock file (optional, nhưng với project cá nhân thì bỏ)
+composer.lock
+
+# Ignore IDE settings
 /.idea/
-/*.log
+/.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore PHPStorm settings
+/.phpunit.result.cache
+
+# Ignore environment config
+.env
+.env.*
