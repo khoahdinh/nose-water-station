@@ -91,26 +91,30 @@ This is a personal learning project. Expect improvements, refactors, and new fea
 
 Here are some screenshots from the Nose Water Station blog:
 
-- Home
+--
 
 ## ![Homepage Screenshot](assets/images/Screen1.png)
 
-- Home
+--
 
 ## ![Homepage Screenshot](assets/images/Screen2.png)
 
-- Footer
+--
 
 ## ![Homepage Screenshot](assets/images/Screen3.png)
 
-- Story
-
-## ![Homepage Screenshot](assets/images/Screen4.png)
-
--
+--
 
 ## ![Homepage Screenshot](assets/images/Screen5.png)
 
--
+--
 
 ## ![Homepage Screenshot](assets/images/Screen6.png)
+
+--
+
+## ![Homepage Screenshot](assets/images/Screen4.png)
+
+--
+
+## ![Homepage Screenshot](assets/images/Screen7.png)
