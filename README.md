@@ -17,6 +17,7 @@ This project includes full source code for a custom blog system — from the adm
 - Comment system (with anti-spam logic)
 - Image upload support
 - Multi-page frontend (Home, About, Single post, Contact…)
+- Multi-language support (English & Vietnamese)
 
 ---
 
