@@ -119,3 +119,7 @@ Here are some screenshots from the Nose Water Station blog:
 --
 
 ## ![Homepage Screenshot](assets/images/Screen7.png)
+
+--
+
+## ![Homepage Screenshot](assets/images/Screen8.png)
