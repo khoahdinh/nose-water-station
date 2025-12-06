@@ -84,3 +84,5 @@ _Status:_ constantly learning & vibing.
 ## 📝 Notes
 
 This is a personal learning project. Expect improvements, refactors, and new features as the developer levels up through coffee, LeetCode, and pure stubbornness.
+
+## Screens
