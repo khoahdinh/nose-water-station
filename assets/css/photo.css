@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
+
+:root {
+    --card_width: 250px;
+    --card_border_radius: 16px;
+    --row_increment: 10px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 40;
+}
+
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: auto;
+    margin: 40px auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+
+    background-color: white;
+}
+
+.card {
+    padding: 0px;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    min-width: 100%;
+    height: 100%;
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+    overflow: hidden;
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+/* Lightbox Styles */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* overflow: auto; */
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+    /* Thêm z-index để nó hiển thị trên các phần tử khác */
+}
+
+.close-lightbox:hover {
+    color: red;
+}
+
+.lightbox-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: auto;
+    clip-path: inset(0 round 10px);
+}
+
+.lightbox-image img {
+
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: -10px;
+
+    /* border: 2px solid orange; */
+}
+
+.lightbox-description {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+    justify-content: space-between;
+
+}
+
+.lightbox-description .info-form {
+    padding: 30px 30px 0px 30px;
+    margin-bottom: 20px;
+    /* Khoảng cách với phần comment */
+}
+
+.lightbox-description .info-form .image-info {
+    margin-bottom: 13px;
+    display: flex;
+    flex-direction: column;  /* Đặt các thông tin nằm theo chiều dọc */
+    gap: 5px;  /* Khoảng cách giữa các dòng */
+    font-family: 'Roboto', sans-serif;  /* Font chữ đồng bộ */
+    color: #333;  /* Màu chữ tối, dễ đọc */
+    padding: 12px;
+    background-color: #f9f9f9;  /* Màu nền nhẹ */
+   
+}
+
+.lightbox-description .info-form .image-info p{
+    margin: 0;  /* Xóa margin mặc định */
+    font-size: 14px;  /* Kích thước chữ vừa phải */
+    line-height: 1.5;  /* Giãn cách dòng để dễ đọc */
+}
+.lightbox-description .info-form .image-info .author{
+    font-weight: bold;  
+    color: palevioletred;  
+}
+
+.lightbox-description .info-form .image-info .date {
+    font-style: italic;  /* In nghiêng để tạo sự khác biệt */
+    color: #757575;  /* Màu nhạt hơn để không làm phân tâm người đọc */
+    font-size: 12px;
+}
+
+.lightbox-description .info-form .image-info .caption {
+    font-size: 16px;  /* Làm chữ caption to hơn một chút */
+    /* font-style: italic;   */
+    color: #555;  /* Màu chữ nhạt để không làm nổi bật quá */
+}
+
+.lightbox-description .info-form .comment-list {
+
+    margin-bottom: 13px;
+   
+    padding: 10px;
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    /* Khoảng cách với phần comment */
+}
+
+.lightbox-description .info-form .comment-list .comment-image {
+
+    
+    display: block;
+    margin-bottom: 10px;
+}
+
+.lightbox-description .info-form .comment-list .comment-image .comment-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.lightbox-description .info-form .comment-list .comment-image .comment-text .comment-author {
+    font-weight: 600; /* Làm đậm tên người bình luận */
+    color: #333; /* Màu đậm cho tên */
+}
+
+.lightbox-description .info-form .comment-list .comment-image .comment-date {
+    font-size: 12px;
+    color: #888; /* Màu xám nhạt cho ngày tháng */
+    margin-top: 5px;
+}
+
+
+
+/* Comment Section */
+
+.lightbox-description .send-comment {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.lightbox-description .send-comment textarea {
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    /* Chiếm toàn bộ không gian còn lại */
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    resize: none;
+    overflow-y: hidden;
+
+}
+
+
+
+.lightbox-description .send-comment textarea:focus {
+    outline: none;
+    /* Xóa viền mặc định */
+    border: 2px solid #ccc;
+    /* Giữ viền bình thường như trạng thái ban đầu */
+}
+
+.lightbox-description .send-comment button {
+    font-family: 'Roboto', sans-serif;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-description .send-comment button:hover {
+    background-color: #444;
+    color: #ffcc00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/* REPONSIVE */
+@media only screen and (max-width:1024px) {
+    .pin_container {
+        width: 96vw;
+    }
+
+    .lightbox-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .lightbox-content {
+        grid-template-columns: 1fr;
+    }
+    .pin_container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+        --card_small: 15; /* Giảm chiều cao card */
+        --card_medium: 20;
+        --card_large: 30;
+    }
+
+    .card {
+        margin: 10px 5px;
+    }
+}
